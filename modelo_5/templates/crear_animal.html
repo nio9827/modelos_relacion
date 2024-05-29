@@ -1,0 +1,15 @@
+<!-- templates/crear_animal.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Animal</title>
+</head>
+<body>
+    <h1>Crear Animal</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- templates/crear_articulo.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Artículo</title>
+</head>
+<body>
+    <h1>Crear Artículo</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="autor_id">Autor:</label>
+        <select name="autor_id" id="autor_id">
+            {% for autor in autores %}
+                <option value="{{ autor.id }}">{{ autor.nombre }} {{ autor.apellido }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

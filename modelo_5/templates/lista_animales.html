@@ -1,0 +1,16 @@
+<!-- templates/lista_animales.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Animales</title>
+</head>
+<body>
+    <h1>Lista de Animales</h1>
+    <ul>
+        {% for animal in animales %}
+        <li>{{ animal.nombre }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_animal' %}">Añadir un nuevo animal</a>
+</body>
+</html>

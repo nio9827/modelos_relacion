@@ -1,0 +1,16 @@
+<!-- templates/lista_razas.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Razas</title>
+</head>
+<body>
+    <h1>Lista de Razas</h1>
+    <ul>
+        {% for raza in razas %}
+        <li>{{ raza.nombre }} ({{ raza.animal.nombre }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_raza' %}">Añadir una nueva raza</a>
+</body>
+</html>

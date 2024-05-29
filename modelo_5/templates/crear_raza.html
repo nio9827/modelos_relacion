@@ -1,0 +1,15 @@
+<!-- templates/crear_raza.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Raza</title>
+</head>
+<body>
+    <h1>Crear Raza</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

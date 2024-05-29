@@ -1,0 +1,23 @@
+<!-- templates/lista_autores.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Autores</title>
+</head>
+<body>
+    <h1>Lista de Autores</h1>
+    <ul>
+        {% for autor in autores %}
+        <li>{{ autor.nombre }} {{ autor.apellido }} - {{ autor.email }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h1>Lista de Artículos</h1>
+    <ul>
+        {% for articulo in articulos %}
+        <li>{{ articulo.titulo }} por {{ articulo.autor.nombre }} {{ articulo.autor.apellido }} - {{ articulo.fecha_publicacion }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- templates/crear_casa.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Casa</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Crear Casa</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <script type="text/javascript">
+        $("#id_animal").change(function () {
+            var url = "{% url 'cargar_razas' %}";  // URL para cargar razas
+            var animalId = $(this).val();  // obtener el id del animal seleccionado
+            $.ajax({
+                url: url,
+                data: {
+                    'animal_id': animalId
+                },
+                success: function (data) {
+                    $("#id_raza").html(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

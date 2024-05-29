@@ -1,0 +1,16 @@
+<!-- templates/crear_empleado.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Empleado</title>
+</head>
+<body>
+    <h1>Crear Empleado</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ empleado_form.as_p }}
+        {{ direccion_form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- templates/lista_casas.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Casas</title>
+</head>
+<body>
+    <h1>Lista de Casas</h1>
+    <ul>
+        {% for casa in casas %}
+        <li>{{ casa.nombre_animal }} - {{ casa.raza.nombre }} ({{ casa.animal.nombre }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
